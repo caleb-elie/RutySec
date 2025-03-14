@@ -1,0 +1,8 @@
+secrets
+string
+os
+hashlib
+requests
+cryptography
+colorama
+art
