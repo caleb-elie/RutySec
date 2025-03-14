@@ -79,9 +79,9 @@ def main():
     while True:
         print(Fore.YELLOW + "\nOptions:" + Style.RESET_ALL)
         print("1. Generate a Secure Password")
-        print("2. Hash a Password")
-        print("3. Check if Password is Leaked")
-        print("4. Run Dictionary Attack")
+        print("2. Hash a password")
+        print("3. Check if password is leaked")
+        print("4. Run dictionary attack")
         print("5. Exit")
         choice = input(Fore.CYAN + "Select an option: " + Style.RESET_ALL)
         
