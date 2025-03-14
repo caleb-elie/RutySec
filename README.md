@@ -30,8 +30,28 @@ pip install -r requirements.txt
 
 ### **3. Run RUTYSec**
 ```bash
-python RUTYSec.py
+python3 RUTYSec.py
 ```
+
+## Troubleshooting on Kali Linux
+If you encounter issues running RUTYSec on Kali Linux, try the following fixes:
+- Ensure Python 3 is the default version:
+  ```bash
+  python3 --version
+  ```
+  If not, use `python3` instead of `python` in commands.
+- Install missing dependencies manually:
+  ```bash
+  pip3 install -r requirements.txt
+  ```
+- If `requests` or `pycryptodome` cause issues, install them explicitly:
+  ```bash
+  pip3 install requests pycryptodome
+  ```
+- If permissions cause issues, try running with sudo:
+  ```bash
+  sudo python3 RUTYSec.py
+  ```
 
 ## Usage
 Upon running RUTYSec, you’ll be presented with the following menu:
@@ -46,7 +66,7 @@ Upon running RUTYSec, you’ll be presented with the following menu:
 ### Example Commands
 #### Generate a Secure Password
 ```bash
-python RUTYSec.py
+python3 RUTYSec.py
 # Choose option 1
 # Enter length: 16
 # Output: X7kP!m9qL2vR8tJn
@@ -54,7 +74,7 @@ python RUTYSec.py
 
 #### Hash a Password
 ```bash
-python RUTYSec.py
+python3 RUTYSec.py
 # Choose option 2
 # Enter password: mypass
 # Select algorithm: sha256
@@ -63,7 +83,7 @@ python RUTYSec.py
 
 #### Check if Password is Leaked
 ```bash
-python RUTYSec.py
+python3 RUTYSec.py
 # Choose option 3
 # Enter password: password123
 # Output: This password has been leaked 100000 times
@@ -71,7 +91,7 @@ python RUTYSec.py
 
 #### Dictionary Attack (Pentesting)
 ```bash
-python RUTYSec.py
+python3 RUTYSec.py
 # Choose option 4
 # Enter target hash: a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
 # Select algorithm: sha256
@@ -82,9 +102,16 @@ python RUTYSec.py
 - Python 3.8+
 - Internet connection (for password breach checking)
 - A user-provided `password.txt` file or the RockYou wordlist (for dictionary attacks)
+- Dependencies listed in `requirements.txt`:
+  ```
+  requests
+  hashlib
+  argparse
+  pycryptodome
+  ```
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Disclaimer
