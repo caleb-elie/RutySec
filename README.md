@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 ### **3. Run RUTYSec**
 ```bash
-python3 RUTYSec.py
+python rutySec.py
 ```
 
 ## Troubleshooting on Kali Linux
@@ -50,9 +50,29 @@ If you encounter issues running RUTYSec on Kali Linux, try the following fixes:
   ```
 - If permissions cause issues, try running with sudo:
   ```bash
-  sudo python3 RUTYSec.py
+  sudo python rutySec.py
   ```
+  ```
+  # Clone the repository
+git clone <repository_url>
 
+# Navigate into the directory
+cd RUTYSec
+
+# List all files (dir for Windows, ls for Unix-like systems)
+ls  # or 'dir' if on Windows
+
+# View the file contents
+cat rutySec.py  # or 'type rutySec.py' on Windows
+
+# Then
+nano rutySec.py
+# Save: Ctrl + S
+# Exit: Ctrl + X
+
+# Run the script
+python3 rutySec.py
+```
 ## Usage
 Upon running RUTYSec, you’ll be presented with the following menu:
 
@@ -66,7 +86,7 @@ Upon running RUTYSec, you’ll be presented with the following menu:
 ### Example Commands
 #### Generate a Secure Password
 ```bash
-python3 RUTYSec.py
+python rutySec.py
 # Choose option 1
 # Enter length: 16
 # Output: X7kP!m9qL2vR8tJn
@@ -74,16 +94,16 @@ python3 RUTYSec.py
 
 #### Hash a Password
 ```bash
-python3 RUTYSec.py
+python rutySec.py
 # Choose option 2
 # Enter password: mypass
 # Select algorithm: sha256
 # Output: a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
 ```
 
-#### Check if Password is Leaked
+#### Check if Password is leaked
 ```bash
-python3 RUTYSec.py
+python rutySec.py
 # Choose option 3
 # Enter password: password123
 # Output: This password has been leaked 100000 times
@@ -91,7 +111,7 @@ python3 RUTYSec.py
 
 #### Dictionary Attack (Pentesting)
 ```bash
-python3 RUTYSec.py
+python rutySec.py
 # Choose option 4
 # Enter target hash: a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
 # Select algorithm: sha256
